@@ -70,6 +70,38 @@
             </next>
           </block>
         </statement>
+        <next>
+          <block type="oled_cleardisplay" id="105">
+            <next>
+              <block type="oled_setcursor" id="114" inline="true">
+                <value name="STARTX">
+                  <block type="math_number" id="121">
+                    <field name="NUM">10</field>
+                  </block>
+                </value>
+                <value name="STARTY">
+                  <block type="math_number" id="122">
+                    <field name="NUM">10</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="oled_drawtext" id="137">
+                    <field name="TEXT"># steps = </field>
+                    <next>
+                      <block type="oled_drawnumber" id="146" inline="true">
+                        <value name="NUMBER">
+                          <block type="variables_get" id="150">
+                            <field name="VAR">distance</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
       </block>
     </next>
   </block>
